@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col">
+    Código
+    <select class="form-select" [(ngModel)]="codigo" placeholder="Código">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+    <div class="mb-3 mt-2">
+      <label for="exampleFormControlInput1" class="form-label">Descripción</label>
+      <input class="form-control" type="text" placeholder="Inserta descripción" [(ngModel)]="descripcion">
+    </div>
+    Precio
+    <select class="form-select" [(ngModel)]="precio">
+      <option>11.00</option>
+      <option>11.50</option>
+      <option>12.00</option>
+    </select>
+  </div>
+  <div class="btn-group-horizontal mt-1" role="group" id="actions">
+    <button type="button" class="btn btn-dark m-3" (click)="agregar()">Agregar</button>
+    <button type="button" class="btn btn-dark m-3" (click)="modificarArticulo()">Modificar</button>
+  </div>
+  <app-articulo [listaArticulos]="articulos" (updatedList)="updateList($event)" (articuloSeleccionado)="selectArticulo($event)"></app-articulo>

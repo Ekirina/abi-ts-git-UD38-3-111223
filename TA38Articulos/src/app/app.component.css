@@ -1,0 +1,11 @@
+#actions{
+    justify-content: center;
+    margin-left: 30%;
+}
+.row{
+    margin-top: 10%;
+}
+
+.form-select{
+    background-color: rgb(221, 221, 221);
+}
